@@ -21,10 +21,12 @@
 - controller 业务逻辑文件
   - index.js 主业务逻辑文件，随着逻辑变多 业务逻辑的文件可以拆分，然后统一导入到 index.js 中
 
-### 启动以及测试
+### Node服务器 启动以及测试
 
 - *启动：* nodeman app.js
-- *测试node服务是否启动正常：* http://localhost:3000/ceshi
+- *测试node服务是否启动正常：* http://localhost:3000/ceshi （ 正常打印出来 {"msg":"测试：node服务器启动成功"} ）
+
+- 到此表示 Node服务器启动成功（但是尚未连接数据库）
 
 ### 连接数据库
 
