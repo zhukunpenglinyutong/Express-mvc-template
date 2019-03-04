@@ -6,7 +6,7 @@ const ceshi = (req,res,next) => {
   res.json({msg:"测试：node服务器启动成功"})
 }
 
-// 查询数据库,测试 Express 是否可以连接到数据库（GET）
+// 示例（GET）
 // const ceshidb = (req,res,next) => {
 //   const sql = `连接数据库中表的 SQL 查询语句`
 //   conn.query(sql, (err,result) => {
