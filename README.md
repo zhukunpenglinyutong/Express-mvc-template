@@ -8,11 +8,8 @@
 
 - 直接安装：npm install
 
-- *必备安装（对比下，怕安装不全出问题）*
-- Express：npm i express --save
-- Mysql（插件）：npm i mysql --save
-- cors（解决跨域问题）：npm i core --save
-- 选择安装：nodemon（自动重启node，不用每次都关闭然后重启了）
+- *依赖项介绍：Express, MySQL，Cors, nodemon*
+
 
 ### 文件夹 以及 文件介绍
 
@@ -29,4 +26,26 @@
 - *启动：* nodeman app.js
 - *测试node服务是否启动正常：* http://localhost:3000/ceshi
 
-### 启动服务器
+### 连接数据库
+
+> service/index.js 里面的代码要换成 相应的数据了
+
+```
+const mysql = require('mysql')
+
+const conn = mysql.createConnection({
+  host : '数据库网址，本地是 127.0.0.1，可以输入网址连接其他电脑中的 数据库',
+  database : '数据库名称',
+  user : '数据库连接账号',
+  password : '数据库连接密码',
+  multipleStatements : true , // 开启同时执行多个 SQL 语句的功能
+})
+
+module.exports = conn
+```
+
+### 层级 介绍（伪MVC）
+
+- service 是控制数据库连接的层
+- router 是路由层
+- controller 是业务逻辑层，数据库交互 和 对应路由 都在这一层（*未来是否考虑这一层的解耦一下*）
