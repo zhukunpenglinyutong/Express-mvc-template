@@ -10,6 +10,4 @@ app.use(bodyParser.urlencoded({ extended: true })); // 解析 application/x-www-
 app.use(router) // 渲染路由模块
 app.use(cors()) // 解决跨域
 
-app.listen(3000,() => {
-  console.log(`http://localhost:3000`)
-})
+module.exports = app
