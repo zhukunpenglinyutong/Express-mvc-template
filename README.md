@@ -2,7 +2,14 @@
 
 > 这是本人 用于快速搭建 API 的 Express 做的一个 模板，目前具有快速搭建API，日志记录，安全防护（SQL注入和XSS）的功能，后期还会不断的完善拓展
 
-> 目前版本 v1.0 beta（2019.3.25）
+> 目前版本 v1.0 Alpha（2019.4.7）
+
+> 修改内容 🍞
+
+- 优化直接运行 npm run dev 不能出现结果这一项（增加控制台提示效果，让其先配置服务器）
+- 解决app.js中 跨域插件不起效果的bug（原因是cors要注册到 router前面）
+- 使用morgan写日志：使用新的组件 logger, 配置：https://www.npmjs.com/package/morgan
+- npm run prd（还是仍然有部分BUG）
 
 ---
 ### 安装依赖  ⛑
@@ -69,6 +76,14 @@
 
 ---
 ### 历史版本  ⚓️
+
+- 目前版本 v1.0 Alpha（2019.4.7）
+  - 优化直接运行 npm run dev 不能出现结果这一项（增加控制台提示效果，让其先配置服务器）
+  - 解决app.js中 跨域插件不起效果的bug（原因是cors要注册到 router前面）
+  - 使用morgan写日志：使用新的组件 logger, 配置：https://www.npmjs.com/package/morgan
+  - npm run prd（还是仍然有部分BUG）
+
+---
 
 - v1.0 beta (2019.3.25)
   - 服务启动由app.js 拆分为 bin/www.js 和 app.js;

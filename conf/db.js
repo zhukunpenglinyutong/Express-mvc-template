@@ -7,19 +7,19 @@ let MYSQL_CONF;
 if (env === 'dev') {
   MYSQL_CONF = {
     host: '127.0.0.1',
-    user: '账户',
-    password: '密码',
-    database: '数据库'
+    user: 'root',
+    password: '12345678',
+    database: 'blog'
   }
 }
 
 // 线上环境的数据库配置
 if (env === 'production') {
   MYSQL_CONF = {
-    host: '线上服务器',
-    user: '账户',
-    password: '密码',
-    database: '数据库'
+    host: '127.0.0.1',
+    user: 'root',
+    password: '12345678',
+    database: 'blog'
   }
 }
 
