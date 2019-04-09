@@ -10,8 +10,9 @@ const logger= require('morgan') // 日志记录
 
 const ENV = process.env.NODE_ENV
 
-if (ENV === 'dev') app.use(logger('dev')); // 日志记录（简易版），直接控制台打印，不文件写入
-if (ENV ==='production') {
+// 这里是因为 prd 使用有问题，所以调换了下位置，为了能使用日志记录功能
+if (ENV !== 'dev') app.use(logger('dev')); // 日志记录（简易版），直接控制台打印，不文件写入
+if (ENV ==='dev') {
   // 创建文件写入流
   const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs', 'access.log'), { flags: 'a' })
   app.use(logger('combined', { stream: accessLogStream }))

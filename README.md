@@ -80,8 +80,8 @@
 - 目前版本 v1.0 Alpha（2019.4.7）
   - 优化直接运行 npm run dev 不能出现结果这一项（增加控制台提示效果，让其先配置服务器）
   - 解决app.js中 跨域插件不起效果的bug（原因是cors要注册到 router前面）
-  - 使用morgan写日志：使用新的组件 logger, 配置：https://www.npmjs.com/package/morgan
-  - npm run prd（还是仍然有部分BUG）
+  - 使用morgan写日志：使用新的组件 morgan, 配置：https://www.npmjs.com/package/morgan
+  - npm run prd（还是仍然有部分BUG）（所以这里暂时改成dev执行记录日志）
 
 ---
 
